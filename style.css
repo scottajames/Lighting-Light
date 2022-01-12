@@ -1,0 +1,127 @@
+:root {
+  --white: #F7F6F2;
+  --black: #2C2A26;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+}
+*:focus {
+    outline: none;
+}
+footer {
+  position: relative;
+  min-height: 1vh;
+  width:  100vw;
+  background-color: #4A2F1C;
+}
+header {
+  border-bottom: 1px solid #4A2F1C;
+}
+body {
+  background-color:  var(--white);
+  margin: 0;
+  padding:  0;
+  overflow-x: hidden;
+  width:  100vw;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: stretch;
+  margin:  0 auto;
+  width:  100vw;
+  max-width:  1280px;
+}
+input {
+  width:  10vw;
+  min-width:  100px;
+  padding-left:  5px;
+  font-size:  2vmin;
+  border-radius:  50px;
+  border:  none;
+}
+header a {
+  font-weight:  bold;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 2vmin;
+}
+.hover:hover {
+  color: #C8A2C8;
+}
+#container h1 {
+  font-size: 2.5vmin;
+  color:  var(--white);
+}
+#container p {
+  font-size:  2vmin;
+  color:  var(--grey);
+}
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0fr 1fr;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 50px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "topText topImage"
+    "content content";
+  margin:  0 auto;
+  width:  90vw;
+  max-width:  1000px;
+}
+
+.topText { grid-area: topText;
+  margin:  0vh 5vw;
+  align-self: center;
+}
+.topImage { grid-area: topImage;
+  align-self: center;}
+.topImage img {
+  max-width: 100%;
+  height: auto;
+}
+#content {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr; 
+  grid-template-areas: 
+    "products"; 
+  grid-area: content;
+  margin-bottom:  10vh;
+}
+.products { grid-area: products;
+  text-align: center;
+  display:  flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.products a {
+  width:  10vw;
+  max-width:  150px;
+  min-width:  110px;
+  color: var(--black);
+  overflow-y: hidden;
+  text-decoration: none;
+  display: inline-block;
+  margin:  0vh 2vw;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.products ul li {
+  display:  inline-flex;
+}
+.products img {
+  width:  10vw;
+  max-width: 150px;
+  min-width:  110px;
+  height:  auto;
+}
