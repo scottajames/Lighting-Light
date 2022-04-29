@@ -100,24 +100,26 @@ header a {
 }
 .products { grid-area: products;
   text-align: center;
-  display:  flex;
-  flex-wrap: wrap;
-  justify-content: center;
+}
+.products ul li {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: normal;
+  align-content: center; 
 }
 .products a {
   width:  10vw;
   max-width:  150px;
   min-width:  110px;
   color: var(--black);
-  overflow-y: hidden;
+  overflow: hidden;
   text-decoration: none;
   display: inline-block;
   margin:  0vh 2vw;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-}
-.products ul li {
-  display:  inline-flex;
 }
 .products img {
   width:  10vw;
